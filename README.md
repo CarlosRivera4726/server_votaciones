@@ -1,7 +1,9 @@
 
   # Bienvenidos a mi proyecto personal 📝  
   La idea principal es crear un sistema de votaciones, por el momento solo llevo creada
-  la interfaz "UI" con html, css y algo de js, aunque es estatico, pero es como quiero que sea vea por el momento. Tengo con Spring Boot las relaciones, el get by id, y faltaria crear lo que seria el patch y el post, por otro lado mejorar la base de datos para los candidatos, para que puedan subir su imagen, de resto todo está llendo por buen camino, les dejo lo que seria los sql, y algunos ejemplos de esos archivos aqui mismo
+  la interfaz "UI" con html, css y algo de js, aunque es estatico, pero es como quiero que sea vea por el momento. Tengo con Spring Boot las relaciones, el get by id, y faltaria crear lo que seria el patch y el post, por otro lado mejorar la base de datos para los candidatos, para que puedan subir su imagen, de resto todo está llendo por buen camino, les dejo lo que seria los sql, y algunos ejemplos de esos archivos aqui mismo.
+
+  he decidido usar angular para el UI, así que eliminare los archivos de resources, en los commits anteriores van a seguir como quiero que se vea sin problema.
 
   ## ¿Qué necesitamos para que funcione? 🔥  
   Necesitamos el SDK 17 para que funcione, necesitamos vs code o algun editor de confianza y que les guste, mysql workbench o algun entorno que les permita ver los datos para corroborar la información.
