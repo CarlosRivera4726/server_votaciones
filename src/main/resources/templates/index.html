@@ -3,27 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Votaciones - 2023</title>
+    <title>Bienvenido al Sistema de Votaciones</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
-
-    <script>
-      function changeTitle() {
-        var title = document.getElementById("title");
-        var candidatos = document.getElementById("candidatos");
-        var votaciones = document.getElementById("votaciones");
-        if (votaciones.value === "1") {
-          title.innerHTML = "Votaciones Alcaldía - 2024";
-          candidatos.innerHTML = "Candidatos Alcaldía - 2024";
-        } else if (votaciones.value === "2") {
-          title.innerHTML = "Votaciones Gobernación - 2024";
-          candidatos.innerHTML = "Candidatos Gobernación - 2024";
-        } else if (votaciones.value === "3") {
-          title.innerHTML = "Votaciones Asamblea - 2024";
-          candidatos.innerHTML = "Candidatos Asamble - 2024";
-        }
-      }
-    </script>
   </head>
   <body>
     <main>
@@ -32,33 +14,10 @@
 
         <h1 id="title">Votaciones Alcaldía - 2023</h1>
       </header>
-      <div class="selectors">
-        <label for="votaciones">
-          Votaciones Disponibles:
-          <select name="votaciones" id="votaciones">
-            <option value="0">Seleccione las votaciones disponibles</option>
-            <option value="1">Alcaldía</option>
-            <option value="2">Gobernación</option>
-            <option value="3">Asamblea</option>
-          </select>
-
-          <button onclick="changeTitle()" value="Verificar">Verificar</button>
-        </label>
-      </div>
-      <h2 id="candidatos">Candidatos alcaldia - {Municipio Seleccionado}</h2>
+      <!-- Aqui va a existir un formulario para el ingreso -->
       <div class="gallery">
         <div class="cantidato">
-          <label>Candidato 1</label>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Gustavo_Bolivar_Moreno.jpg/220px-Gustavo_Bolivar_Moreno.jpg"
-            alt="alcalde {nombre y apellido} {Municipio Seleccionado}"
-          />
-          <form>
-            <a class="link btn btn-secondary" href="propuestas.html"
-              >Propuestas</a
-            >
-            <input class="btn btn-primary" type="submit" value="Votar" />
-          </form>
+          <a class="link btn btn-secondary" href="votaciones.html">Ingresar</a>
         </div>
       </div>
     </main>

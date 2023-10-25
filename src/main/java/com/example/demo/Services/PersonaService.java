@@ -12,15 +12,27 @@ import com.example.demo.Models.Persona;
 @Service
 public class PersonaService {
     @Autowired
-    private PersonaRepository personasRepository;
+    private PersonaRepository personaRepository;
 
 
     public List<Persona> GetAllPersonas(){
-        return (List<Persona>)personasRepository.findAll();
+        return (List<Persona>)personaRepository.findAll();
     }
 
     public Optional<Persona> GetById(UUID id){
-        return personasRepository.findById(id);
+        return personaRepository.findById(id);
+    }
+
+    public void AddPersona(Persona persona){
+        personaRepository.save(persona);
+    }
+
+    public void UpdatePersona(Persona persona){
+        personaRepository.save(persona);
+    }
+
+    public void DeletePersona(UUID id){
+        personaRepository.deleteById(id);
     }
 
 }
