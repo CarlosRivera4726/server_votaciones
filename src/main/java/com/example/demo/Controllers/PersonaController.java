@@ -4,8 +4,13 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +19,11 @@ import com.example.demo.Services.PersonaService;
 
 @RestController
 @RequestMapping(path = "/personas")
+@CrossOrigin
 public class PersonaController {
+    // private method
+    private UUID StringToUUID(String id) { return UUID.fromString(id); }
+
     @Autowired
     private PersonaService personasServices;
 
@@ -26,9 +35,24 @@ public class PersonaController {
 
     @GetMapping(path = "/{id}")
     public Persona getPersona(@PathVariable String id){
-        UUID uuid = UUID.fromString(id);
-        //String idBinario = "UUID_TO_BIN('" + uuid.toString() + "')";
-        
+        UUID uuid = StringToUUID(id);
         return personasServices.GetById(uuid).get();
     }
+
+    @PostMapping(path = "/addnew")
+    public void AddPersona(@RequestBody Persona persona){
+        personasServices.AddPersona(persona);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void DeletePersonaById(@PathVariable String id){
+        UUID uuid = StringToUUID(id);
+        personasServices.DeletePersona(uuid);
+    }
+
+    @PutMapping(path = "/edit/{id}")
+    public void UpdatePersonaById(@PathVariable("id") String id, @RequestBody Persona persona){
+        personasServices.UpdatePersona(persona);
+    }
+
 }
