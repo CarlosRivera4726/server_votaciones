@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+  align-items: center;
+}
+.header > img {
+  max-width: 200px;
+  width: 100%;
+}
+.header > h1 {
+  max-width: 300px;
+}
+h1,
+h2,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.selectors {
+  width: 55vw;
+  min-width: 293px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+form {
+  width: 30vw;
+  min-width: 293px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+button,
+select,
+.link {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+.link {
+  margin: 10px 0 0 0;
+  text-decoration: none;
+  min-height: 2em;
+  text-align: center;
+  background-color: #f5f6f7;
+  color: #0a0a23;
+  appearance: auto;
+  padding-block: 4px;
+  border-width: 1px;
+  border-style: outset;
+  border-color: #0a0a23;
+  border-image: initial;
+}
+.btn-submit {
+  transition: 1s all;
+  cursor: pointer;
+  border-color: #fdb347;
+  background-color: #f5f6f781;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+@media screen and (max-width: 590px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+    align-items: center;
+  }
+  .header > img {
+    max-width: 150px;
+    width: 100%;
+  }
+  .header > h1 {
+    max-width: 200px;
+    font-size: 24px;
+  }
+  h1,
+  h2,
+  p {
+    margin: 1em auto;
+    text-align: center;
+  }
+}
