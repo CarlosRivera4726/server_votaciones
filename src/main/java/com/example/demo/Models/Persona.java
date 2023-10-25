@@ -2,6 +2,8 @@ package com.example.demo.Models;
 
 
 
+import java.util.UUID;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,8 +26,8 @@ import lombok.Setter;
 public class Persona{ 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", columnDefinition = "BINARY(16)")
-    private byte[] id;
+    @Column(name = "ID", columnDefinition = "BIN_TO_UUID(BINARY(16))")
+    private UUID id;
 
     @Column(name = "NOMBRE")
     private String nombre;

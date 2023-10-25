@@ -16,7 +16,7 @@ public class UbicacionController {
     @Autowired
     private UbicacionService ubicacionService;
 
-    @GetMapping(path = "/all")
+    @GetMapping(path = "")
     public List<Ubicacion> GetAllUbicaciones(){
         return ubicacionService.GetAllUbicaciones();
     }

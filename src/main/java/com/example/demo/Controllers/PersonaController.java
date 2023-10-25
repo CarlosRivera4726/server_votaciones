@@ -1,6 +1,5 @@
 package com.example.demo.Controllers;
 
-import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,10 +28,7 @@ public class PersonaController {
     public Persona getPersona(@PathVariable String id){
         UUID uuid = UUID.fromString(id);
         //String idBinario = "UUID_TO_BIN('" + uuid.toString() + "')";
-        ByteBuffer byteBuffer = ByteBuffer.wrap(new byte[16]);
-        byteBuffer.putLong(uuid.getMostSignificantBits());
-        byteBuffer.putLong(uuid.getLeastSignificantBits());
-        byte[] idBytes = byteBuffer.array();
-        return personasServices.GetById(idBytes).get();
+        
+        return personasServices.GetById(uuid).get();
     }
 }
