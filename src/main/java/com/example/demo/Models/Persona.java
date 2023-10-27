@@ -39,8 +39,8 @@ public class Persona{
     private String cedula;
 
     @ManyToOne
-    @JoinColumn(name = "ubicacion", referencedColumnName = "ID")
-    private Ubicacion ubicacion;
+    @JoinColumn(name = "ciudad", referencedColumnName = "ID")
+    private Ciudad ciudad;
 
     @Column(name = "CONTRASEÑA")
     private String contraseña;

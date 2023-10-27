@@ -15,7 +15,7 @@ public class PersonaService {
     private PersonaRepository personaRepository;
 
 
-    public List<Persona> GetAllPersonas(){
+    public List<Persona> GetAll(){
         return (List<Persona>)personaRepository.findAll();
     }
 
@@ -23,15 +23,15 @@ public class PersonaService {
         return personaRepository.findById(id);
     }
 
-    public void AddPersona(Persona persona){
+    public void Add(Persona persona){
         personaRepository.save(persona);
     }
 
-    public void UpdatePersona(Persona persona){
+    public void Update(Persona persona){
         personaRepository.save(persona);
     }
 
-    public void DeletePersona(UUID id){
+    public void Delete(UUID id){
         personaRepository.deleteById(id);
     }
 

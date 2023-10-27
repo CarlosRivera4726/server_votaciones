@@ -15,23 +15,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "UBICACIONES")
-public class Ubicacion {
+@Table(name = "departamentos")
+public class Departamento {
     @Id
     @Column(name = "ID")
-    private Integer id;
-    
-    @Column(name = "DEPARTAMENTO")
-    private String departamento;
+    public Integer id;
 
-    @Column(name = "CIUDAD")
-    private String ciudad;
+    @Column(name = "NOMBRE")
+    public String nombre;
 
-    @OneToMany(mappedBy = "ubicacion")
     @JsonIgnore
-    private List<Persona> personas;
+    @OneToMany(mappedBy = "departamento")
+    public List<Ciudad> ciudades;
+
 }

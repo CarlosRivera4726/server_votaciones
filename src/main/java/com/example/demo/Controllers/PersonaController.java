@@ -30,7 +30,7 @@ public class PersonaController {
 
     @GetMapping(path = "")
     public List<Persona> getAllPersonas(){
-        return personasServices.GetAllPersonas();
+        return personasServices.GetAll();
     }
 
     @GetMapping(path = "/{id}")
@@ -41,18 +41,18 @@ public class PersonaController {
 
     @PostMapping(path = "/addnew")
     public void AddPersona(@RequestBody Persona persona){
-        personasServices.AddPersona(persona);
+        personasServices.Add(persona);
     }
 
     @DeleteMapping(path = "/{id}")
     public void DeletePersonaById(@PathVariable String id){
         UUID uuid = StringToUUID(id);
-        personasServices.DeletePersona(uuid);
+        personasServices.Delete(uuid);
     }
 
     @PutMapping(path = "/edit/{id}")
     public void UpdatePersonaById(@PathVariable("id") String id, @RequestBody Persona persona){
-        personasServices.UpdatePersona(persona);
+        personasServices.Update(persona);
     }
 
 }
