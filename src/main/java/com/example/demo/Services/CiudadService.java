@@ -14,8 +14,12 @@ public class CiudadService {
     @Autowired
     private CiudadRepository ciudadRepository;
 
-     public List<Ciudad> GetAll(){
+    public List<Ciudad> GetAll(){
         return (List<Ciudad>)ciudadRepository.findAll();
+    }
+
+    public List<Ciudad> GetByDepartamento(Integer id){
+        return (List<Ciudad>)ciudadRepository.findAllByIdDepartamento(id);
     }
 
     public Optional<Ciudad> GetById(Integer id){

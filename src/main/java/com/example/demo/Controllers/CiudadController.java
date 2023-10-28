@@ -21,13 +21,18 @@ public class CiudadController {
     private CiudadService ciudadService;
 
     @GetMapping(path = "")
-    public List<Ciudad> GetAllUbicaciones(){
+    public List<Ciudad> GetAllCiudades(){
         return ciudadService.GetAll();
     }
 
     @GetMapping(path = "/{id}")
     public Ciudad GetUbicacionById(@PathVariable("id") Integer id){
         return ciudadService.GetById(id).get();
+    }
+
+    @GetMapping(path = "/departamento/{id}")
+    public List<Ciudad> getAllCiudadesByDepartamento(@PathVariable("id") Integer id){
+        return ciudadService.GetByDepartamento(id);
     }
     
 }
