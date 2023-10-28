@@ -1,4 +1,4 @@
-package com.example.demo.Repositories;
+package com.registraduria.votaciones.Repositories;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.Models.Ciudad;
+import com.registraduria.votaciones.Models.Ciudad;
 
 @Repository
 public interface CiudadRepository extends CrudRepository<Ciudad, Integer>{

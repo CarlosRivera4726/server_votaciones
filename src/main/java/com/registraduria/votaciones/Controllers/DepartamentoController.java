@@ -1,4 +1,4 @@
-package com.example.demo.Controllers;
+package com.registraduria.votaciones.Controllers;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Models.Departamento;
-import com.example.demo.Services.DepartamentoService;
+import com.registraduria.votaciones.Models.Departamento;
+import com.registraduria.votaciones.Services.DepartamentoService;
 
 @RestController
 @RequestMapping(path = "/departamento")

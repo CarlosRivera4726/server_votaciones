@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.registraduria.votaciones.Models;
 
 
 

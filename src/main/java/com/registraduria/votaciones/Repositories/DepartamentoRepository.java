@@ -1,7 +1,7 @@
-package com.example.demo.Repositories;
+package com.registraduria.votaciones.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.Models.Departamento;
+import com.registraduria.votaciones.Models.Departamento;
 
 public interface DepartamentoRepository extends CrudRepository<Departamento, Integer>{ }

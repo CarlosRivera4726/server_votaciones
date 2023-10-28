@@ -1,0 +1,18 @@
+POST http://localhost:8080/personas
+Content-Type: application/json
+
+{
+    "nombre": "Gustavo",
+    "apellido": "Petro",
+    "cedula": "999888777666",
+    "ciudad": {
+        "id": 2
+    },
+    "contraseña": 1234
+}
+###
+
+GET http://localhost:8080/personas
+
+###
+DELETE http://localhost:8080/personas/f8e40fe7-1603-4b74-8f06-05a1a45c6847

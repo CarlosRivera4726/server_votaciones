@@ -1,4 +1,4 @@
-package com.example.demo.Controllers;
+package com.registraduria.votaciones.Controllers;
 
 import java.util.List;
 import java.util.UUID;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Models.Persona;
-import com.example.demo.Services.PersonaService;
+import com.registraduria.votaciones.Models.Persona;
+import com.registraduria.votaciones.Services.PersonaService;
 
 @RestController
 @RequestMapping(path = "/personas")
@@ -39,7 +39,7 @@ public class PersonaController {
         return personasServices.GetById(uuid).get();
     }
 
-    @PostMapping(path = "/addnew")
+    @PostMapping
     public void AddPersona(@RequestBody Persona persona){
         personasServices.Add(persona);
     }

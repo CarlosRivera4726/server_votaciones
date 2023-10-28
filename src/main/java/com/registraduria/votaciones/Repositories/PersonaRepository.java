@@ -1,4 +1,4 @@
-package com.example.demo.Repositories;
+package com.registraduria.votaciones.Repositories;
 
 import java.util.UUID;
 
@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 //import org.springframework.data.repository.query.Param;
 
-import com.example.demo.Models.Persona;
+import com.registraduria.votaciones.Models.Persona;
 
 public interface PersonaRepository extends CrudRepository<Persona, UUID> {
 }
