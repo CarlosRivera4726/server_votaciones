@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 ###
 
-GET http://localhost:8080/personas
+GET http://localhost:8080/persona_votacion
 
 ###
 DELETE http://localhost:8080/personas/f8e40fe7-1603-4b74-8f06-05a1a45c6847
