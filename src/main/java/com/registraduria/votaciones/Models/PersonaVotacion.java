@@ -31,5 +31,8 @@ public class PersonaVotacion {
     @ManyToOne
     @JoinColumn(name = "VOTACION", referencedColumnName = "ID", insertable = false, updatable = false)
     private Votacion votacion;
+
+    @Column(name = "DISPONIBLE")
+    private boolean disponible;
     
 }
