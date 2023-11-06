@@ -39,7 +39,7 @@ public class PersonaController {
         return personasServices.GetById(uuid).get();
     }
 
-    @PostMapping
+    @PostMapping(path = "")
     public void AddPersona(@RequestBody Persona persona){
         personasServices.Add(persona);
     }

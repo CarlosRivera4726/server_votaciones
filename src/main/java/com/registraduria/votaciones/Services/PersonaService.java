@@ -23,6 +23,13 @@ public class PersonaService {
     }
 
     public void Add(Persona persona){
+        System.out.println(persona.getNombre());        
+        System.out.println(persona.getApellido());
+        System.out.println(persona.getCedula());
+        System.out.println(persona.getContraseña());
+        System.out.println(persona.getCiudad().getNombre());
+        System.out.println(persona.getCiudad().getDepartamento().getNombre());
+
         String encodedPassword = new PasswordEncoderService().encodePassword(persona.getContraseña());
         persona.setContraseña(encodedPassword);
         personaRepository.save(persona);

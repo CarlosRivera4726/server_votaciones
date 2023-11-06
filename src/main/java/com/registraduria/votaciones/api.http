@@ -6,13 +6,16 @@ Content-Type: application/json
     "apellido": "Petro",
     "cedula": "999888777666",
     "ciudad": {
-        "id": 2
+        "id": 1,
+        "departamento": {
+            "id": 1
+        }
     },
     "contraseña": 1234
 }
 ###
 
-GET http://localhost:8080/persona_votacion
+GET http://localhost:8080/ciudad
 
 ###
 DELETE http://localhost:8080/personas/f8e40fe7-1603-4b74-8f06-05a1a45c6847
