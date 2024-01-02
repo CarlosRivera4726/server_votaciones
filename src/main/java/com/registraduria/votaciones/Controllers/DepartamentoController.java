@@ -1,8 +1,10 @@
 package com.registraduria.votaciones.Controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,13 +22,15 @@ public class DepartamentoController {
     private DepartamentoService departamentoService;
 
     @GetMapping(path = "")
-    public List<Departamento> GetAllUbicaciones(){
+    public List<Departamento> GetAllUbicaciones() {
         return departamentoService.GetAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Departamento GetUbicacionById(@PathVariable("id") Integer id){
-        return departamentoService.GetById(id).get();
+    public ResponseEntity<Departamento> GetUbicacionById(@PathVariable("id") Integer id) {
+        Optional<Departamento> departamento = departamentoService.GetById(id);
+        return departamento.map(d -> ResponseEntity.ok().body(d))
+                .orElse(ResponseEntity.notFound().build());
     }
-    
+
 }

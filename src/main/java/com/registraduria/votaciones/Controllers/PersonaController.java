@@ -22,36 +22,37 @@ import com.registraduria.votaciones.Services.PersonaService;
 @CrossOrigin
 public class PersonaController {
     // private method
-    private UUID StringToUUID(String id) { return UUID.fromString(id); }
+    private UUID StringToUUID(String id) {
+        return UUID.fromString(id);
+    }
 
     @Autowired
     private PersonaService personasServices;
 
-
     @GetMapping(path = "")
-    public List<Persona> getAllPersonas(){
+    public List<Persona> getAllPersonas() {
         return personasServices.GetAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Persona getPersona(@PathVariable String id){
+    public Persona getPersona(@PathVariable String id) {
         UUID uuid = StringToUUID(id);
         return personasServices.GetById(uuid).get();
     }
 
     @PostMapping(path = "")
-    public void AddPersona(@RequestBody Persona persona){
+    public void AddPersona(@RequestBody Persona persona) {
         personasServices.Add(persona);
     }
 
     @DeleteMapping(path = "/{id}")
-    public void DeletePersonaById(@PathVariable String id){
+    public void DeletePersonaById(@PathVariable String id) {
         UUID uuid = StringToUUID(id);
         personasServices.Delete(uuid);
     }
 
-    @PutMapping(path = "/edit/{id}")
-    public void UpdatePersonaById(@PathVariable("id") String id, @RequestBody Persona persona){
+    @PutMapping(path = "/{id}")
+    public void UpdatePersonaById(@PathVariable("id") String id, @RequestBody Persona persona) {
         personasServices.Update(persona);
     }
 
