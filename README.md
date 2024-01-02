@@ -67,7 +67,8 @@ CREATE TABLE IF NOT EXISTS CANDIDATOS_VOTACIONES (
 );
   ```
 
-y el link para ver el [diseño preliminar del UI esta aquí.](https://github.com/CarlosRivera4726/Cliente_Votaciones)
+> [!NOTE]
+> Se debe realizar la UI nuevamente
 
 ## Authors  
 - [@CarlosRivera4726](https://github.com/CarlosRivera4726)  
