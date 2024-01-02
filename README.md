@@ -11,6 +11,11 @@
       
   ## Código SQL para crear la base de datos ✨  
   Como les dije aqui les dejo el codigo inicial para crear la base de datos y las tablas, el resto de archivos los encontraran en la carpeta BD.
+  ## Vista en swagger
+  > [!NOTE]
+  > [Link para ver el SWAGGER en localhost](http://localhost:8080/swagger-ui/index.html)
+  ![image](https://github.com/CarlosRivera4726/server_votaciones/assets/49885608/d5b6ae9c-543b-403b-a455-7e39441c30f1)
+
 
   ```SQL
   DROP DATABASE IF EXISTS REGISTRADURIA;
