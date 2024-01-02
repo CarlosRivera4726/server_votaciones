@@ -1,7 +1,5 @@
 package com.registraduria.votaciones.Models;
 
-
-
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -23,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "PERSONAS")
-public class Persona{ 
+public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", columnDefinition = "BIN_TO_UUID(BINARY(16))")
@@ -45,4 +43,4 @@ public class Persona{
     @Column(name = "CONTRASEÑA")
     private String contraseña;
 
- }
+}

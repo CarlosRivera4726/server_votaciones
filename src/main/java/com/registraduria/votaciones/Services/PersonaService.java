@@ -9,21 +9,22 @@ import org.springframework.stereotype.Service;
 
 import com.registraduria.votaciones.Models.Persona;
 import com.registraduria.votaciones.Repositories.PersonaRepository;
+
 @Service
 public class PersonaService {
     @Autowired
     private PersonaRepository personaRepository;
 
-    public List<Persona> GetAll(){
-        return (List<Persona>)personaRepository.findAll();
+    public List<Persona> GetAll() {
+        return (List<Persona>) personaRepository.findAll();
     }
 
-    public Optional<Persona> GetById(UUID id){
+    public Optional<Persona> GetById(UUID id) {
         return personaRepository.findById(id);
     }
 
-    public void Add(Persona persona){
-        System.out.println(persona.getNombre());        
+    public void Add(Persona persona) {
+        System.out.println(persona.getNombre());
         System.out.println(persona.getApellido());
         System.out.println(persona.getCedula());
         System.out.println(persona.getContraseña());
@@ -35,11 +36,11 @@ public class PersonaService {
         personaRepository.save(persona);
     }
 
-    public void Update(Persona persona){
+    public void Update(Persona persona) {
         personaRepository.save(persona);
     }
 
-    public void Delete(UUID id){
+    public void Delete(UUID id) {
         personaRepository.deleteById(id);
     }
 
